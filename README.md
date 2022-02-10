@@ -19,6 +19,15 @@ a reference style image, we approximate paired real data using GAN inversion and
 that approximate paired data. We then encourage the StyleGAN to generalize so that the learned style can be applied
 to all other images.
 
+
+## Installation
+```
+pip install -r requirements.txt
+```
+```
+pip install dlib
+```
+
 ## Updates
 
 * `2021-12-22` Integrated into [Replicate](https://replicate.com) using [cog](https://github.com/replicate/cog). Try it out [![Replicate](https://replicate.com/mchong6/jojogan/badge)](https://replicate.com/mchong6/jojogan)
