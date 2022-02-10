@@ -1,0 +1,8 @@
+tqdm
+gdown
+scikit-learn
+scipy
+lpips
+cmake
+opencv-python
+wandb
