@@ -6,3 +6,4 @@ lpips
 cmake
 opencv-python
 wandb
+matplotlib
