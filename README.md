@@ -50,23 +50,23 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
     "jojo_yasuho_preserve_color.pt": "1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L",
     "art.pt": "1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT"
     
-stylegan2-ffhq-config-f.pt https://drive.google.com/file/d/1Yr7KuD959btpmcKGAUsbAk5rPjX2MytK
-e4e_ffhq_encode.pt https://drive.google.com/file/d/1o6ijA3PkcewZvwJJ73dJ0fxhndn0nnh7
-restyle_psp_ffhq_encode.pt https://drive.google.com/file/d/1nbxCIVw9H3YnQsoIPykNEFwWJnHVHlVd
-arcane_caitlyn.pt https://drive.google.com/file/d/1gOsDTiTPcENiFOrhmkkxJcTURykW1dRc
-arcane_caitlyn_preserve_color.pt https://drive.google.com/file/d/1cUTyjU-q98P75a8THCaO545RTwpVV-aH
-arcane_jinx_preserve_color.pt https://drive.google.com/file/d/1jElwHxaYPod5Itdy18izJk49K1nl4ney
-arcane_jinx.pt https://drive.google.com/file/d/1quQ8vPjYpUiXM4k1_KIwP4EccOefPpG_
-arcane_multi_preserve_color.pt https://drive.google.com/file/d/1enJgrC08NpWpx2XGBmLt1laimjpGCyfl
-arcane_multi.pt https://drive.google.com/file/d/15V9s09sgaw-zhKp116VHigf5FowAy43f
-sketch_multi.pt https://drive.google.com/file/d/1GdaeHGBGjBAFsWipTL0y-ssUiAqk8AxD
-disney.pt https://drive.google.com/file/d/1zbE2upakFUAx8ximYnLofFwfT8MilqJA
-disney_preserve_color.pt https://drive.google.com/file/d/1Bnh02DjfvN_Wm8c4JdOiNV4q9J7Z_tsi
-jojo.pt https://drive.google.com/file/d/13cR2xjIBj8Ga5jMO7gtxzIJj2PDsBYK4
-jojo_preserve_color.pt https://drive.google.com/file/d/1ZRwYLRytCEKi__eT2Zxv1IlV6BGVQ_K2
-jojo_yasuho.pt https://drive.google.com/file/d/1grZT3Gz1DLzFoJchAmoj3LoM9ew9ROX_
-jojo_yasuho_preserve_color.pt https://drive.google.com/file/d/1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L
-art.pt https://drive.google.com/file/d/1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT
+stylegan2-ffhq-config-f.pt https://drive.google.com/file/d/1Yr7KuD959btpmcKGAUsbAk5rPjX2MytK/
+e4e_ffhq_encode.pt https://drive.google.com/file/d/1o6ijA3PkcewZvwJJ73dJ0fxhndn0nnh7/
+restyle_psp_ffhq_encode.pt https://drive.google.com/file/d/1nbxCIVw9H3YnQsoIPykNEFwWJnHVHlVd/
+arcane_caitlyn.pt https://drive.google.com/file/d/1gOsDTiTPcENiFOrhmkkxJcTURykW1dRc/
+arcane_caitlyn_preserve_color.pt https://drive.google.com/file/d/1cUTyjU-q98P75a8THCaO545RTwpVV-aH/
+arcane_jinx_preserve_color.pt https://drive.google.com/file/d/1jElwHxaYPod5Itdy18izJk49K1nl4ney/
+arcane_jinx.pt https://drive.google.com/file/d/1quQ8vPjYpUiXM4k1_KIwP4EccOefPpG_/
+arcane_multi_preserve_color.pt https://drive.google.com/file/d/1enJgrC08NpWpx2XGBmLt1laimjpGCyfl/
+arcane_multi.pt https://drive.google.com/file/d/15V9s09sgaw-zhKp116VHigf5FowAy43f/
+sketch_multi.pt https://drive.google.com/file/d/1GdaeHGBGjBAFsWipTL0y-ssUiAqk8AxD/
+disney.pt https://drive.google.com/file/d/1zbE2upakFUAx8ximYnLofFwfT8MilqJA/
+disney_preserve_color.pt https://drive.google.com/file/d/1Bnh02DjfvN_Wm8c4JdOiNV4q9J7Z_tsi/
+jojo.pt https://drive.google.com/file/d/13cR2xjIBj8Ga5jMO7gtxzIJj2PDsBYK4/
+jojo_preserve_color.pt https://drive.google.com/file/d/1ZRwYLRytCEKi__eT2Zxv1IlV6BGVQ_K2/
+jojo_yasuho.pt https://drive.google.com/file/d/1grZT3Gz1DLzFoJchAmoj3LoM9ew9ROX_/
+jojo_yasuho_preserve_color.pt https://drive.google.com/file/d/1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L/
+art.pt https://drive.google.com/file/d/1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT/
 
 
 ## Updates
