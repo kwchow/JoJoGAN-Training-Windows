@@ -29,10 +29,10 @@ Download [anaconda](https://www.anaconda.com/products/individual)
 Download this repository
 
 Step 1:
-```
+```sh
 conda create -n jojo python=3.7
 conda activate jojo
-cd <your code's file directory here>
+cd <your codes file directory here>
 ```
 Step 2 option 1: 30 series NVIDIA GPU
 ```
