@@ -22,12 +22,7 @@ def parse_args():
     parser.add_argument("--alpha", default="0.0", help="alpha value")
     parser.add_argument("--preserve_color", default="False", help="preserve_color")
     parser.add_argument("--num_iter", default="300", help="num_iter")
-    #parser.add_argument("--use_wandb", default="False", help="use_wandb")
-    parser.add_argument("--log_interval", default="50", help="log_interval")
-    parser.add_argument("--n_sample", default="5", help="n_sample")
-    parser.add_argument("--seed", default="3000", help="seed")
     parser.add_argument("--device", default="cuda", help="device")
-    parser.add_argument("--input", default="iu.jpeg", help="input image")
     parser.add_argument("--model_name", default="custom", help="model name")
     args = parser.parse_args()
     return args
@@ -36,10 +31,6 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     device = args.device
-    filename = args.input
-    filepath = f'test_input/{filename}'
-    name = strip_path_extension(filepath)+'.pt'
-    aligned_face = align_face(filepath)
     latent_dim = 512
     targets = []
     latents = []

@@ -11,7 +11,6 @@ import numpy as np
 from torch import nn, autograd, optim
 from torch.nn import functional as F
 from tqdm import tqdm
-#import wandb
 from model import *
 from e4e_projection import projection as e4e_projection
 
@@ -64,4 +63,6 @@ if __name__ == "__main__":
         my_sample = generator(my_w, input_is_latent=True)
         face = transform(aligned_face).unsqueeze(0).to(device)
         my_output = torch.cat([face, my_sample], 0)
-        torchvision.utils.save_image(utils.make_grid(my_output, normalize=True, range=(-1, 1)), "result.png")
+        print(strip_path_extension(filepath))
+        clear_name = "".join(strip_path_extension(filepath).split('/')[1])
+        torchvision.utils.save_image(utils.make_grid(my_output, normalize=True, range=(-1, 1)), "results/result_"+args.model_name+"_"+clear_name+".png")
