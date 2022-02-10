@@ -50,6 +50,7 @@ Step 3
 ```
 pip install -r requirements.txt
 pip install dlib
+conda install -c conda-forge ffmpeg
 ```
 
 # Download Models
