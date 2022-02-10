@@ -5,7 +5,6 @@
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/JoJoGAN)
 [![Wandb Report](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-28.svg)](https://wandb.ai/akhaliq/jojogan/reports/JoJoGAN-One-Shot-Face-Stylization-with-Wandb-and-Gradio---VmlldzoxNDMzNzgx)
 
-
 ![](teasers/teaser.jpg)
 
 This is the PyTorch implementation of [JoJoGAN: One Shot Face Stylization](https://arxiv.org/abs/2112.11641).
@@ -19,54 +18,108 @@ a reference style image, we approximate paired real data using GAN inversion and
 that approximate paired data. We then encourage the StyleGAN to generalize so that the learned style can be applied
 to all other images.
 
+## This is a forked Windows Installation Tutorial and the main codes will not be updated
 
-## Installation
+Follow this YouTube [tutorial]() to understand the installation process more easily and if you have any questions feel free to join my [discord](https://discord.gg/sE8R7e45MV) and ask there.
+
+## Setup Environment
+Step 0:
+Download [anaconda](https://www.anaconda.com/products/individual)
+
+Download this repository
+
+Step 1:
+```
+conda create -n jojo python=3.7
+conda activate jojo
+cd <your code's file directory here>
+```
+Step 2 option 1: 30 series NVIDIA GPU
+```
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+Step 2 option 2: none 30 series NVIDIA GPU
+```
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+```
+Step 2 option 3: CPU only (no NVIDIA GPU)
+```
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+```
+Step 3
 ```
 pip install -r requirements.txt
-```
-```
 pip install dlib
 ```
 
-# download models
-create folder called model
-http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+# Download Models
+checkpoints:
+- [stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1Yr7KuD959btpmcKGAUsbAk5rPjX2MytK/)
+- [e4e_ffhq_encode.pt](https://drive.google.com/file/d/1o6ijA3PkcewZvwJJ73dJ0fxhndn0nnh7/)
+- [restyle_psp_ffhq_encode.pt](https://drive.google.com/file/d/1nbxCIVw9H3YnQsoIPykNEFwWJnHVHlVd/)
+- [dlibshape_predictor_68_face_landmarks.dat](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
 
-    "stylegan2-ffhq-config-f.pt": "1Yr7KuD959btpmcKGAUsbAk5rPjX2MytK",
-    "e4e_ffhq_encode.pt": "1o6ijA3PkcewZvwJJ73dJ0fxhndn0nnh7",
-    "restyle_psp_ffhq_encode.pt": "1nbxCIVw9H3YnQsoIPykNEFwWJnHVHlVd",
-    "arcane_caitlyn.pt": "1gOsDTiTPcENiFOrhmkkxJcTURykW1dRc",
-    "arcane_caitlyn_preserve_color.pt": "1cUTyjU-q98P75a8THCaO545RTwpVV-aH",
-    "arcane_jinx_preserve_color.pt": "1jElwHxaYPod5Itdy18izJk49K1nl4ney",
-    "arcane_jinx.pt": "1quQ8vPjYpUiXM4k1_KIwP4EccOefPpG_",
-    "arcane_multi_preserve_color.pt": "1enJgrC08NpWpx2XGBmLt1laimjpGCyfl",
-    "arcane_multi.pt": "15V9s09sgaw-zhKp116VHigf5FowAy43f",
-    "sketch_multi.pt": "1GdaeHGBGjBAFsWipTL0y-ssUiAqk8AxD",
-    "disney.pt": "1zbE2upakFUAx8ximYnLofFwfT8MilqJA",
-    "disney_preserve_color.pt": "1Bnh02DjfvN_Wm8c4JdOiNV4q9J7Z_tsi",
-    "jojo.pt": "13cR2xjIBj8Ga5jMO7gtxzIJj2PDsBYK4",
-    "jojo_preserve_color.pt": "1ZRwYLRytCEKi__eT2Zxv1IlV6BGVQ_K2",
-    "jojo_yasuho.pt": "1grZT3Gz1DLzFoJchAmoj3LoM9ew9ROX_",
-    "jojo_yasuho_preserve_color.pt": "1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L",
-    "art.pt": "1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT"
-    
-stylegan2-ffhq-config-f.pt https://drive.google.com/file/d/1Yr7KuD959btpmcKGAUsbAk5rPjX2MytK/
-e4e_ffhq_encode.pt https://drive.google.com/file/d/1o6ijA3PkcewZvwJJ73dJ0fxhndn0nnh7/
-restyle_psp_ffhq_encode.pt https://drive.google.com/file/d/1nbxCIVw9H3YnQsoIPykNEFwWJnHVHlVd/
-arcane_caitlyn.pt https://drive.google.com/file/d/1gOsDTiTPcENiFOrhmkkxJcTURykW1dRc/
-arcane_caitlyn_preserve_color.pt https://drive.google.com/file/d/1cUTyjU-q98P75a8THCaO545RTwpVV-aH/
-arcane_jinx_preserve_color.pt https://drive.google.com/file/d/1jElwHxaYPod5Itdy18izJk49K1nl4ney/
-arcane_jinx.pt https://drive.google.com/file/d/1quQ8vPjYpUiXM4k1_KIwP4EccOefPpG_/
-arcane_multi_preserve_color.pt https://drive.google.com/file/d/1enJgrC08NpWpx2XGBmLt1laimjpGCyfl/
-arcane_multi.pt https://drive.google.com/file/d/15V9s09sgaw-zhKp116VHigf5FowAy43f/
-sketch_multi.pt https://drive.google.com/file/d/1GdaeHGBGjBAFsWipTL0y-ssUiAqk8AxD/
-disney.pt https://drive.google.com/file/d/1zbE2upakFUAx8ximYnLofFwfT8MilqJA/
-disney_preserve_color.pt https://drive.google.com/file/d/1Bnh02DjfvN_Wm8c4JdOiNV4q9J7Z_tsi/
-jojo.pt https://drive.google.com/file/d/13cR2xjIBj8Ga5jMO7gtxzIJj2PDsBYK4/
-jojo_preserve_color.pt https://drive.google.com/file/d/1ZRwYLRytCEKi__eT2Zxv1IlV6BGVQ_K2/
-jojo_yasuho.pt https://drive.google.com/file/d/1grZT3Gz1DLzFoJchAmoj3LoM9ew9ROX_/
-jojo_yasuho_preserve_color.pt https://drive.google.com/file/d/1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L/
-art.pt https://drive.google.com/file/d/1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT/
+pretrained style models (optional):
+- [arcane_caitlyn.pt](https://drive.google.com/file/d/1gOsDTiTPcENiFOrhmkkxJcTURykW1dRc/)
+- [arcane_caitlyn_preserve_color.pt](https://drive.google.com/file/d/1cUTyjU-q98P75a8THCaO545RTwpVV-aH/)
+- [arcane_jinx_preserve_color.pt](https://drive.google.com/file/d/1jElwHxaYPod5Itdy18izJk49K1nl4ney/)
+- [arcane_jinx.pt](https://drive.google.com/file/d/1quQ8vPjYpUiXM4k1_KIwP4EccOefPpG_/)
+- [arcane_multi_preserve_color.pt](https://drive.google.com/file/d/1enJgrC08NpWpx2XGBmLt1laimjpGCyfl/)
+- [arcane_multi.pt](https://drive.google.com/file/d/15V9s09sgaw-zhKp116VHigf5FowAy43f/)
+- [sketch_multi.pt](https://drive.google.com/file/d/1GdaeHGBGjBAFsWipTL0y-ssUiAqk8AxD/)
+- [disney.pt](https://drive.google.com/file/d/1zbE2upakFUAx8ximYnLofFwfT8MilqJA/)
+- [disney_preserve_color.pt](https://drive.google.com/file/d/1Bnh02DjfvN_Wm8c4JdOiNV4q9J7Z_tsi/)
+- [jojo.pt](https://drive.google.com/file/d/13cR2xjIBj8Ga5jMO7gtxzIJj2PDsBYK4/)
+- [jojo_preserve_color.pt](https://drive.google.com/file/d/1ZRwYLRytCEKi__eT2Zxv1IlV6BGVQ_K2/)
+- [jojo_yasuho.pt](https://drive.google.com/file/d/1grZT3Gz1DLzFoJchAmoj3LoM9ew9ROX_/)
+- [jojo_yasuho_preserve_color.pt](https://drive.google.com/file/d/1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L/)
+- [art.pt](https://drive.google.com/file/d/1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT/)
+
+model structure
+```
+📂JoJoGAN/ # this is root
+├── 📂models/
+│	├── 📜stylegan2-ffhq-config-f.pt
+│	├── 📜e4e_ffhq_encode.pt
+│	├── 📜restyle_psp_ffhq_encode.pt
+│	├── 📜dlibshape_predictor_68_face_landmarks.dat
+│	├── 📜<any pretrained style models>
+│	│...
+│...
+```
+
+## Evaluate a Pretrained Style Model
+Download the pretrained style model and put it under the `models` folder like in the diagram shown above. Put the input image in the `test_input` folder, in the following `image_name`, you don't need to provide the file path, just the file name.
+
+```sh
+python evaluate.py --input <image_name> --model_name <model_name> --seed <random_seed> --device <cuda/cpu>
+```
+eg.
+```
+python evaluate.py --device cuda --input iu.jpeg --model_name jojo --seed 3000
+```
+## Train a Custom Model
+Add images with the same style into the folder `style_images`. See inside the folder for example.
+
+```sh
+python train_custom_style.py --model_name <new_name> --alpha <alpha_value> --preserve_color <True/False> --num_iter <number_of_iterations> --device <cuda/cpu>
+```
+- `model_name`: give your new model a name, maybe based on the style images?
+- `alpha`: the alpha value that'll determine the strength of the style. `0` = strongest, `1` = weakest. Float value between 0 and 1
+- `preserve_color`: To whether preserve the color from the style images. This should be a boolean `True` or `False`
+- `num_iter`: Number of iterations for the training. Usually `300` ~ `500` iter would be fine
+- `device`: If you don't have NVIDIA GPU with CUDA, use `cpu`. Otherwise, `cuda` (basically the default and you don't need to declare)
+
+eg.
+```
+python train_custom_style.py --model_name custom --alpha 0.0 --preserve_color False --num_iter 300 --device cuda
+```
+To evaluate the model, follow the previous step will do, just change the `model_name` to the one you just created. It'll just be like:
+```
+python evaluate.py --device cuda --input iu.jpeg --model_name custom --seed 3000
+```
+
+my fork edits end here.
 
 
 ## Updates
