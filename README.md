@@ -53,7 +53,7 @@ pip install dlib
 conda install -c conda-forge ffmpeg
 ```
 
-# Download Models
+## Download Models
 checkpoints:
 - [stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1Yr7KuD959btpmcKGAUsbAk5rPjX2MytK/)
 - [e4e_ffhq_encode.pt](https://drive.google.com/file/d/1o6ijA3PkcewZvwJJ73dJ0fxhndn0nnh7/)
@@ -89,7 +89,7 @@ model structure
 │...
 ```
 
-## Evaluate a Pretrained Style Model
+## Evaluate a Pretrained Style Model on Image
 Download the pretrained style model and put it under the `models` folder like in the diagram shown above. Put the input image in the `test_input` folder, in the following `image_name`, you don't need to provide the file path, just the file name.
 
 ```sh
@@ -99,6 +99,16 @@ eg.
 ```
 python evaluate.py --device cuda --input iu.jpeg --model_name jojo --seed 3000
 ```
+## Evaluate a Pretrained Style Model on Video
+Put the input video in the `test_input` folder, in the following `video_name`, you don't need to provide the file path, just the file name.
+```
+python evaluate.py --input <video_name> --model_name <model_name> --seed <random_seed> --device <cuda/cpu>
+```
+eg.
+```
+python evaluate.py --device cuda --input elon.mp4 --model_name jojo --seed 3000
+```
+
 ## Train a Custom Model
 Add images with the same style into the folder `style_images`. See inside the folder for example.
 
