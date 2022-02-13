@@ -20,7 +20,7 @@ to all other images.
 
 ## This is a forked Windows Installation Tutorial and the main codes will not be updated
 
-Follow this YouTube [tutorial]() to understand the installation process more easily and if you have any questions feel free to join my [discord](https://discord.gg/sE8R7e45MV) and ask there.
+Follow this YouTube [tutorial]() to understand the installation process more easily and if you have any questions feel free to join my [discord](https://discord.gg/sE8R7e45MV) and ask there. Codes are mostly taken from the official google colab, and modified for local use.
 
 ## Setup Environment
 Step 0:
