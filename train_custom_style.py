@@ -86,7 +86,7 @@ if __name__ == "__main__":
     g_optim = optim.Adam(generator.parameters(), lr=2e-3, betas=(0, 0.99))
 
     # Which layers to swap for generating a family of plausible real images -> fake image
-    if args.preserve_color:
+    if "True" == args.preserve_color:
         id_swap = [9,11,15,16,17]
     else:
         id_swap = list(range(7, generator.n_latent))
