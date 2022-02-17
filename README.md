@@ -130,6 +130,14 @@ To evaluate the model, follow the previous step will do, just change the `model_
 python evaluate.py --device cuda --input iu.jpeg --model_name custom --seed 3000
 ```
 
+## Force training (manual align style image)
+When your style's face cannot be detected you can try using `force_train.py`. This is how I trained the colossal model. Save this [image](https://imgur.com/a/zBQbVVB), drag it into photoshop or [photopea](https://www.photopea.com/), match the style image you want with the features of this colossal titan. Eyes to eyes, nose to nose, ears to ears, jaws to jaws if possible. The more accurate the better. Drag it into the `style_images_aligned` folder and do:
+
+```sh
+python train_custom_style.py --model_name <insert_name_here> --force_name <insert_style_image_here> --num_iter 300 --device cuda
+```
+and after getting the mode, you can evaluate normally like any other models.
+
 my fork edits end here.
 
 
