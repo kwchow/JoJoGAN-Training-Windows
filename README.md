@@ -136,7 +136,7 @@ When your style's face cannot be detected you can try using `force_train.py`. Th
 ```sh
 python train_custom_style.py --model_name <insert_name_here> --force_name <insert_style_image_here> --num_iter 300 --device cuda
 ```
-and after getting the mode, you can evaluate normally like any other models.
+and after getting the trained model, you can evaluate normally like any other models.
 
 my fork edits end here.
 
