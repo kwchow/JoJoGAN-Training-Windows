@@ -137,8 +137,9 @@ When your style's face cannot be detected you can try using `force_train.py`. Th
 ```sh
 python force_train.py --model_name <insert_name_here> --force_name <insert_style_image_here> --num_iter 300 --device cuda
 ```
+eg.
 ```
-python force_train.py --model_name colossal --force_name colossal --num_iter 300 --device cuda
+python force_train.py --model_name colossal --force_name colossal.png --num_iter 300 --device cuda
 ```
 and after getting the trained model, you can evaluate normally like any other models.
 
