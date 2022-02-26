@@ -7,3 +7,4 @@ opencv-python
 wandb
 matplotlib
 scikit-image
+pybind11
