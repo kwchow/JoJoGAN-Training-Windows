@@ -50,7 +50,7 @@ Step 3
 ```
 pip install -r requirements.txt
 pip install cmake
-pip install dlib
+pip install dlib==19.20
 conda install -c conda-forge ffmpeg
 ```
 
