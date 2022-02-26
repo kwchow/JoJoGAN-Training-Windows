@@ -103,11 +103,11 @@ python evaluate.py --device cuda --input iu.jpeg --model_name jojo --seed 3000
 ## Evaluate a Pretrained Style Model on Video
 Put the input video in the `test_input` folder, in the following `video_name`, you don't need to provide the file path, just the file name.
 ```sh
-python evaluate.py --input <video_name> --model_name <model_name> --seed <random_seed> --device <cuda/cpu>
+python evaluate_video.py --input <video_name> --model_name <model_name> --seed <random_seed> --device <cuda/cpu>
 ```
 eg.
 ```
-python evaluate.py --device cuda --input elon.mp4 --model_name jojo --seed 3000
+python evaluate_video.py --device cuda --input elon.mp4 --model_name jojo --seed 3000
 ```
 
 ## Train a Custom Model
