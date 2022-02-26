@@ -49,23 +49,23 @@ if __name__ == "__main__":
 
         name = strip_path_extension(name)
 
-        # crop and align the face
-        style_aligned_path = os.path.join('style_images_aligned', f'{name}.png')
-        if not os.path.exists(style_aligned_path):
-            style_aligned = align_face(style_path)
-            style_aligned.save(style_aligned_path)
-        else:
-            style_aligned = Image.open(style_aligned_path).convert('RGB')
+        # # crop and align the face
+        # style_aligned_path = os.path.join('style_images_aligned', f'{name}.png')
+        # if not os.path.exists(style_aligned_path):
+        #     style_aligned = align_face(style_path)
+        #     style_aligned.save(style_aligned_path)
+        # else:
+        #     style_aligned = Image.open(style_aligned_path).convert('RGB')
 
-        # GAN invert
-        style_code_path = os.path.join('inversion_codes', f'{name}.pt')
-        if not os.path.exists(style_code_path):
-            latent = e4e_projection(style_aligned, style_code_path, device)
-        else:
-            latent = torch.load(style_code_path)['latent']
+        # # GAN invert
+        # style_code_path = os.path.join('inversion_codes', f'{name}.pt')
+        # if not os.path.exists(style_code_path):
+        #     latent = e4e_projection(style_aligned, style_code_path, device)
+        # else:
+        #     latent = torch.load(style_code_path)['latent']
 
-        targets.append(transform(style_aligned).to(device))
-        latents.append(latent.to(device))
+        # targets.append(transform(style_aligned).to(device))
+        # latents.append(latent.to(device))
 
     # --------------------- manual codes
     style_aligned = Image.open(f"style_images_aligned/{args.force_name}.png").convert('RGB')
