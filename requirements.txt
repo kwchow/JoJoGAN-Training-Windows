@@ -8,3 +8,4 @@ wandb
 matplotlib
 scikit-image
 pybind11
+cmake
