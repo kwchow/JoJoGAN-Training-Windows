@@ -49,6 +49,7 @@ conda install pytorch torchvision torchaudio cpuonly -c pytorch
 Step 3
 ```
 pip install -r requirements.txt
+pip install cmake
 pip install dlib
 conda install -c conda-forge ffmpeg
 ```
