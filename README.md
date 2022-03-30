@@ -146,7 +146,7 @@ and after getting the trained model, you can evaluate normally like any other mo
 my fork edits end here.
 
 ## kwchow's Updates
-* `2022-03-30` No code to this fork. Primarily on usage tips
+* `2022-03-30` No code change to this fork. Primarily on usage tips.
   * Should use the latest code base from https://github.com/mchong6/JoJoGAN
   * Alternate usage tutorial from https://chowdera.com/2022/02/202202081726404652.html
   * Prebuilt torch 1.11 cuda 11.3 wheel apparently does not support "cudnn_convolution_backward_weight" which is preferred in "conv2d_gradfix"
